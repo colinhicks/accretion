@@ -1,0 +1,13 @@
+{
+  "name": "accretion",
+  "version": "0.1.0",
+  "dependencies": {
+      "requirejs": "~2.1.4",
+      "backbone": "~1.0.0",
+      "jquery": "~1.9.1",
+      "underscore": "~1.4.4",
+      "normalize.scss": "~2.1.0",
+      "requirejs-text": "~2.0.5",
+      "hogan": "git://github.com/colinhicks/hogan.js.git"
+  }
+}
