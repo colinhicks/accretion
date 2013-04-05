@@ -10,7 +10,7 @@ module.exports = function (grunt) {
         regarde: {
             markup: {
                 files: 'app/**/**/*.html',
-                tasks: ['hogan', 'parallel:dev', 'livereload']
+                tasks: ['livereload']
             },
             scss: {
                 files: 'app/**/*.scss',
@@ -146,6 +146,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-hogan');
 
     grunt.registerTask('default', ['jshint', 'hogan', 'parallel:dev', 'copy', 'livereload-start', 'connect', 'regarde']);
+    grunt.registerTask('fast', ['compass:dev', 'livereload-start', 'connect:livereload', 'regarde']);
+
     grunt.registerTask('build', ['jshint', 'hogan', 'parallel:prod', 'copy']);
     grunt.registerTask('test', ['mocha']);
     grunt.registerTask('acceptance-test', ['hogan','connect:acceptanceTest', 'casperjs']);
